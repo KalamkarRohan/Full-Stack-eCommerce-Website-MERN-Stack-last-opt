@@ -1,0 +1,9 @@
+
+.env
+node_modules/
+.env
+dist/
+build/
+actions-runner/_diag/
+actions-runner/
+actions-runner/

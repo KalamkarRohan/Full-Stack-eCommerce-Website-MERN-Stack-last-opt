@@ -1,0 +1,24 @@
+# Goal- My goal is to build and push the docker image in docker hub
+
+name: docker-build-push
+
+on:
+  push: 
+
+jobs:
+  build-and-push:
+  runs-on: my-runner
+
+  steps:
+    name: Code checkout
+    uses:  actions/checkout@v7
+
+    name: Docker setup
+    uses: docker/setup-docker-action@v5
+
+    name: Login to Docker Hub
+    uses: docker/login-action@v3
+      with:
+        username: ${{ vars.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    
