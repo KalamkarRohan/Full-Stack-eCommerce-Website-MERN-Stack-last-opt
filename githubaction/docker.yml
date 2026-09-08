@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-push:
-  runs-on: my-runner
+  runs-on:  self-hosted
 
   steps:
     name: Code checkout
