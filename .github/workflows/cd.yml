@@ -25,10 +25,4 @@ jobs:
 
       - name: Deploy using Docker Compose
         working-directory: ./frontend
-        run: |
-          sudo docker compose up 
-
-      - name: Check running containers
-        working-directory: ./frontend
-        run: |
-          sudo docker compose ps
+        run: docker run -d -p 3000:80 --name ecommerce-frontend  rohankalamakar/e-commerce:latest
