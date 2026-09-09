@@ -1,36 +1,31 @@
-Goal- We need to deploy the applcation using dgithub action via docker-compose
+name: Docker Compose Deployment
 
-name: docker compose deployment
-
-on: 
+on:
   push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  deploy-the-applcation:
+  deploy-the-application:
     runs-on: self-hosted
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: dockerhub -clone
-        run: | 
+      - name: Pull Docker image
+        run: |
           sudo docker pull rohankalamakar/e-commerce:latest
 
-      - name: docker-compose-up
+      - name: Deploy using Docker Compose
         working-directory: ./frontend
-        run: | 
+        run: |
           sudo docker compose down
-            sudo docker compose pull
-            sudo docker compose up -d
+          sudo docker compose pull
+          sudo docker compose up -d
 
-
-      - name: check-running-container
+      - name: Check running containers
         working-directory: ./frontend
         run: |
           sudo docker compose ps
-
-      
-        
-       
-
