@@ -13,6 +13,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+    steps:
+      - name: docker-compose-install
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose-plugin
+          sudo docker compose version
+
 
       - name: Pull Docker image
         run: |
