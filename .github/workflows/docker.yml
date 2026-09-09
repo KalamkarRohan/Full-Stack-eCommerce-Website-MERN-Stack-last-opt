@@ -11,13 +11,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Docker
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker.io
-          sudo systemctl enable --now docker
-          sudo usermod -aG docker $USER
-
       - name: Check Docker
         run: sudo docker --version
 
