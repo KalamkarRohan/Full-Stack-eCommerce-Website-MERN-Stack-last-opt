@@ -19,8 +19,6 @@ jobs:
         with:
           version: latest
 
-
-
       - name: Pull Docker image
         run: |
           sudo docker pull rohankalamakar/e-commerce:latest
@@ -28,8 +26,6 @@ jobs:
       - name: Deploy using Docker Compose
         working-directory: ./frontend
         run: |
-          sudo docker compose down
-          sudo docker compose pull
           sudo docker compose up -d
 
       - name: Check running containers
