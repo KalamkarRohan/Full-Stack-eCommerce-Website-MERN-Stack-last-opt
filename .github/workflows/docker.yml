@@ -32,4 +32,4 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/e-commerce:latest
+          tags: rohankalamakar/e-commerce:latest
