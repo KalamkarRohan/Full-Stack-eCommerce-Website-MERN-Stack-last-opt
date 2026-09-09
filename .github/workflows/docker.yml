@@ -34,4 +34,4 @@ jobs:
           file: ./frontend/Dockerfile
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/e-commerce:latest
-          load: true
+          
