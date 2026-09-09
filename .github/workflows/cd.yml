@@ -2,7 +2,8 @@ Goal- We need to deploy the applcation using dgithub action via docker-compose
 
 name: docker compose deployment
 
-on: push
+on: 
+  push:
 
 jobs:
   deploy-the-applcation:
