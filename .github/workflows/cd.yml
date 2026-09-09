@@ -25,4 +25,4 @@ jobs:
 
       - name: Deploy using Docker Compose
         working-directory: ./frontend
-        run: docker run -d -p 3000:3000 --name ecommerce-frontend  rohankalamakar/e-commerce:latest
+        run: docker run -d -p 3000:3000 --name ecommerce-final  rohankalamakar/e-commerce:latest
