@@ -1,5 +1,5 @@
 # eCommerce Website (MERN Stack)
-
+1
 Welcome to the eCommerce website project built with the MERN stack (MongoDB, Express.js, React, Node.js). This application allows users to browse products, manage their shopping cart, and place orders. It also includes an seperate admin panel for managing products and viewing orders.
 
 ## Features
