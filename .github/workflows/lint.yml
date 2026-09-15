@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: code-checkout
-      uses: actions/checkout@v4
+      - name: code-checkout
+        uses: actions/checkout@v4
 
-    - name: steup-the-node.js-env
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm' 
+      - name: steup-the-node.js-env
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' 
     
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
     
-    - name: Run Linter
-      run: npm run lint
+      - name: Run Linter
+        run: npm run lint
