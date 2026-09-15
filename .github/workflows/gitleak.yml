@@ -1,7 +1,7 @@
 name: gitleak
 
 on:
-  push:
+  workflow_call:
 
 jobs:
   leaks-find:
@@ -19,4 +19,4 @@ jobs:
         uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
-# f
+
