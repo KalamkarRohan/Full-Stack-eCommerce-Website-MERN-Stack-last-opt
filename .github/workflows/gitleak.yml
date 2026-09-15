@@ -1,4 +1,3 @@
-# GOAL IS TO CHECK LEAK
 name: gitleak
 
 on:
