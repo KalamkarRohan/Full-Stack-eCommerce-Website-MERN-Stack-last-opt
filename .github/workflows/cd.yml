@@ -1,7 +1,7 @@
 name: Docker Compose Deployment
 
 on:
-  workflow_dispatch:
+  workflow_call:
     branches:
       - main
   workflow_dispatch:
