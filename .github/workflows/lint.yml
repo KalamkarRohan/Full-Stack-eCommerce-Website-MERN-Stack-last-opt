@@ -23,4 +23,5 @@ jobs:
         run: npm ci
     
       - name: Run Linter
+        working-directory: ./frontend
         run: npm run lint:frontend
