@@ -1,0 +1,26 @@
+# Goal is to lint the code 
+
+name: Linting
+
+on:
+  push:
+
+jobs:
+  lint-the-code:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: code-checkout
+      uses: actions/checkout@v4
+
+    - name: steup-the-node.js-env
+      uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm' 
+    
+    - name: Install dependencies
+        run: npm ci
+    
+    - name: Run Linter
+        run: npm run lint
