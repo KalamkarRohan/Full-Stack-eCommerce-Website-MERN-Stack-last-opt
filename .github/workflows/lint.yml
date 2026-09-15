@@ -4,11 +4,6 @@ name: Linting
 
 on:
   workflow_call:
-    branches:
-        - main
-  pull_request:
-    branches:
-      - main
 
 
 jobs:
