@@ -3,12 +3,11 @@ name: gitleak
 
 on:
   push:
-  branches:
-        - main
+
 
 jobs:
   leaks-find:
-  runs-on: ubunut-latest
+  runs-on: ubuntu-latest
   steps:
     - name: Code-checkout
       uses: actions/checkout@v4
