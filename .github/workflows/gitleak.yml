@@ -1,7 +1,7 @@
 name: gitleak
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   leaks-find:
