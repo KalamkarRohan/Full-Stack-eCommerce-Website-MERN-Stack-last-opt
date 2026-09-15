@@ -1,3 +1,14 @@
+DevOps work:
+
+Added thefake api key to check the gitleak works-properly - (frontend/src/index.js)
+  const config = {
+  API_KEY: "sk-test-1234567890abcdef1234567890abcdef",
+  API_URL: "https://api.example.com"
+};
+
+export default config;
+
+
 # eCommerce Website (MERN Stack)
 1
 Welcome to the eCommerce website project built with the MERN stack (MongoDB, Express.js, React, Node.js). This application allows users to browse products, manage their shopping cart, and place orders. It also includes an seperate admin panel for managing products and viewing orders.
@@ -31,16 +42,4 @@ Welcome to the eCommerce website project built with the MERN stack (MongoDB, Exp
    ```bash
    git clone [https://github.com/OnkarYevale07/Full-Stack-eCommerce-Website-MERN-Stack.git]
 # CI test
-HEllo
-He
-f
-d
-di
-Addes
-d
-g
-dd
-e
-s
-dd
-de
+
