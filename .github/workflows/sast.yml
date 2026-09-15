@@ -8,13 +8,16 @@ on:
 jobs:
   code-review:
     runs-on: ubuntu-latest
-  steps:
-    - name: code-checkout
-      uses: actions/checkout@v4
-    
-    - name: SonarQube Scan
-      uses: SonarSource/sonarqube-scan-action@v8.2.1
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: https://sonarcloud.io
+    steps:
+      - name: code-checkout
+        uses: actions/checkout@v4
       
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v8.2.1
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
+
+
+# pop
+
