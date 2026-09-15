@@ -2,9 +2,7 @@ name: Docker Compose Deployment
 
 on:
   workflow_call:
-    branches:
-      - main
- 
+
 
 jobs:
   deploy-the-application:
