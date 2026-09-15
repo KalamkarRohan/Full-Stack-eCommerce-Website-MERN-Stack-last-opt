@@ -1,0 +1,17 @@
+# Goal is to review the code usfig SAST
+name: code-review-SAST
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  code-review:
+  runs-on: ubuntu-latest
+  steps:
+    - name: code-checkout
+      uses: actions/checkout@v4
+    
+    - name: SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v8.2.1
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
