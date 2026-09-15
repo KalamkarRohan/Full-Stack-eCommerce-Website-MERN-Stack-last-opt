@@ -7,7 +7,7 @@ on:
       - main
 jobs:
   code-review:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
   steps:
     - name: code-checkout
       uses: actions/checkout@v4
