@@ -1,0 +1,26 @@
+name: gitleak
+
+on:
+  push:
+
+jobs:
+  leaks-find:
+  runs-on: ubunut-latest
+  steps:
+    - name: Code-checkout
+      uses: actions/checkout@v4
+    
+    - name: gitleaks
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v6
+          working-directory: ./frontend
+
+
+
+          with:
+            fetch-depth: 0
+        - uses: gitleaks/gitleaks-action@v3
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+# added
