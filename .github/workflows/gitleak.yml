@@ -13,7 +13,7 @@ jobs:
       
       - name: gitleaks
         uses: actions/checkout@v6
-        working-directory: ./frontend
+   
         with:
           fetch-depth: 0
       - name: gitleak
