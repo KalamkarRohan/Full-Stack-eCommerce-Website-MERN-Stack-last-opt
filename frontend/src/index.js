@@ -16,9 +16,9 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-const config = {
-  API_KEY: "sk-test-1234567890abcdef1234567890abcdef",
-  API_URL: "https://api.example.com"
-};
+// const config = {
+//   API_KEY: "sk-test-1234567890abcdef1234567890abcdef",
+//   API_URL: "https://api.example.com"
+// };
 
 export default config;
