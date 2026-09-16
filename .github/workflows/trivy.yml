@@ -7,28 +7,28 @@ on:
       - main
   
 jobs: 
-  Trivy-check:
-  runs-on: ubuntu-latest
+  trivy-check:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: code-checkout
-      uses: actions/checkout@v4
+    steps:
+      - name: code-checkout
+        uses: actions/checkout@v4
 
-    - name: Doker-setup
-      runs: |
-        sudo apt-get upddate
-        sudo apt-get install docker.io -y 
-        sudo usermod -aG docker $USER
-      
-    - name: Build an image from Dockerfile
-      run: docker build -t application/${{ vars.DOCKERHUB_USERNAME }} .
-      
-    - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@v0.36.0
-      with:
-        image-ref: 'application/${{ vars.DOCKERHUB_USERNAME }}'
-        format: 'table'
-        exit-code: '1'
-        ignore-unfixed: true
-        vuln-type: 'os,library'
-        severity: 'CRITICAL,HIGH'
+      - name: Doker-setup
+        runs: |
+          sudo apt-get upddate
+          sudo apt-get install docker.io -y 
+          sudo usermod -aG docker $USER
+        
+      - name: Build an image from Dockerfile
+        run: docker build -t application/${{ vars.DOCKERHUB_USERNAME }} .
+        
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: 'application/${{ vars.DOCKERHUB_USERNAME }}'
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+          severity: 'CRITICAL,HIGH'
