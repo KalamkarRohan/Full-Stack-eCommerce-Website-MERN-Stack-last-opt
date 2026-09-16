@@ -2,7 +2,7 @@
 
 name: sca-check
 on:
-  push:
+  workflow_call:
     branches:
       - main
 
