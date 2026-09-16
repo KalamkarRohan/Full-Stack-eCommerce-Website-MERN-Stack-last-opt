@@ -21,7 +21,7 @@ jobs:
         sudo usermod -aG docker $USER
       
     - name: Build an image from Dockerfile
-        run: docker build -t application/${{ vars.DOCKERHUB_USERNAME }} .
+      run: docker build -t application/${{ vars.DOCKERHUB_USERNAME }} .
       
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@v0.36.0
