@@ -3,8 +3,8 @@
 name: sca-check
 on:
   push:
-  branches:
-    - main
+    branches:
+      - main
 
 
 jobs:
