@@ -22,6 +22,6 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
           
       - name: Run NPM Audit Action
-        uses: domegreen/npm-audit-action@v3.0.1
+        uses: oke-py/npm-audit-action@v9.4.0
         with:
           audit-level: high
