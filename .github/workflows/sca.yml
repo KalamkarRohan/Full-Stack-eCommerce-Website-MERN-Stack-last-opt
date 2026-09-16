@@ -25,8 +25,7 @@ jobs:
         working-directory: ./frontend
         run: npm ci  
 
-      - name: Run NPM Audit Action
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
-        
+      - name: Run NPM Audit
+        working-directory: ./frontend
+        run: npm audit --audit-level=high
 #d
