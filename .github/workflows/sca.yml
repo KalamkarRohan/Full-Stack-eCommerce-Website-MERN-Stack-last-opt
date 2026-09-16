@@ -23,8 +23,9 @@ jobs:
 
           
       - name: Run NPM Audit Action
-        working-directory: ./frontend
         uses: oke-py/npm-audit-action@v5
+        working-directory: ./frontend
+        run: npm ci
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         
