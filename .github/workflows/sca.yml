@@ -27,7 +27,7 @@ jobs:
 
       - name: Run dependency audit
         working-directory: ./frontend
-        run: npm audit --audit-level=high
+        run: npm audit 
           
       - name: Run NPM Audit Action
         uses: oke-py/npm-audit-action@v5
