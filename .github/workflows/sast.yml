@@ -2,9 +2,8 @@
 name: code-review-SAST
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    
 jobs:
   code-review:
     runs-on: ubuntu-latest
