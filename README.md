@@ -44,3 +44,5 @@ Welcome to the eCommerce website project built with the MERN stack (MongoDB, Exp
 # CI test
 
 se
+# dependency check
+# dependency check
