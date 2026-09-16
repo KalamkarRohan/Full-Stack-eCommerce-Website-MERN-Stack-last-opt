@@ -24,5 +24,6 @@ jobs:
       - name: Run NPM Audit Action
         uses: oke-py/npm-audit-action@v5
         with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
           audit-level: high
 #d
