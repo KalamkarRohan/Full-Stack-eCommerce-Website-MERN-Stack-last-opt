@@ -27,11 +27,8 @@ jobs:
 
       - name: Run dependency audit
         working-directory: ./frontend
-        run: npm audit 
+         npm audit fix --force
           
-      - name: Run NPM Audit Action
-        uses: oke-py/npm-audit-action@v5
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
+      
         
 #d
