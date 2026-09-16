@@ -26,7 +26,6 @@ jobs:
         run: npm ci  
 
       - name: Run NPM Audit Action
-        run: npm ci
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUBTOKEN }}
         
