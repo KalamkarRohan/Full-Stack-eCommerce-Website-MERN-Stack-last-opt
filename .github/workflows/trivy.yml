@@ -21,16 +21,16 @@ jobs:
 
         
       - name: Build an image from Dockerfile
-        run: docker build -t application/${{ vars.DOCKERHUB_USERNAME }} ./frontend
+        run: docker build -t application ./frontend
         
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: 'application/${{ vars.DOCKERHUB_USERNAME }}'
+          image-ref: 'application'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
 
-##FR
+##FRcd
